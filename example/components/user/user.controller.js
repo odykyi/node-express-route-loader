@@ -1,8 +1,8 @@
-const { UserDAO } = require('./user.dao');
+const userDAO = require('./user.dao');
 
 class UserController {
   constructor() {
-    this.userDAO = new UserDAO();
+    this.userDAO = userDAO;
   }
 
   async get(req, res) {
@@ -24,10 +24,9 @@ class UserController {
       id,
     } = req.params;
 
-    const result = await this.userDAO.remove(id);
     return res
       .status(204)
-      .json(result);
+      .json(await this.userDAO.remove(id));
   }
 
   async update(req, res) {
@@ -35,10 +34,9 @@ class UserController {
       id,
     } = req.params;
 
-    const result = await this.userDAO.update(id, req.body);
     return res
       .status(200)
-      .json(result);
+      .json(await this.userDAO.update(id, req.body));
   }
 }
 

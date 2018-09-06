@@ -1,8 +1,8 @@
 const fs = require('fs');
-const util = require('util');
+const { promisify } = require('util');
 
-fs.readFile = util.promisify(fs.readFile);
-fs.writeFile = util.promisify(fs.writeFile);
+fs.readFile = promisify(fs.readFile);
+fs.writeFile = promisify(fs.writeFile);
 
 const usersData = require('./users.json');
 
@@ -11,7 +11,8 @@ const writeUserData = Symbol();
 
 class UserDAO {
   async get(id) {
-    return usersData.find(user => Number(user.id) === Number(id));
+    return usersData
+      .find(user => Number(user.id) === Number(id));
   }
 
   async getAll() {
@@ -53,4 +54,4 @@ class UserDAO {
   }
 }
 
-module.exports = UserDAO;
+module.exports = new UserDAO();
