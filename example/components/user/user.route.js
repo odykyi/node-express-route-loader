@@ -2,8 +2,6 @@ const express = require('express');
 const userController = require('./user.controller');
 
 class UserRoute {
-  // initRoutes() {
-  // }
   constructor() {
     const router = express.Router({ mergeParams: true });
     console.log('--------userController.get', userController.get);
