@@ -1,0 +1,41 @@
+{
+  "name": "node-express-route-loader",
+  "version": "1.0.0",
+  "description": "node.js express middleware for automatic load routes",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odykyi/node-express-route-loader.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "node.js",
+    "express",
+    "router",
+    "route",
+    "expressjs",
+    "express.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odykyi/node-express-route-loader/issues"
+  },
+  "homepage": "https://github.com/odykyi/node-express-route-loader#readme",
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}

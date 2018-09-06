@@ -1,2 +1,2 @@
 # node-express-route-loader
-nodejs express automatic load routes
+nodejs express middleware for automatic load routes
